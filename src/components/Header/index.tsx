@@ -1,5 +1,7 @@
+import NavLink from 'components/NavLink';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import styles from './styles.module.scss';
 
 const Header = () => {
@@ -22,18 +24,27 @@ const Header = () => {
 				</Link>
 
 				<nav className={'hidden md:flex items-center gap-4'}>
-					<Link href={'/'}>
+					<NavLink href={'/'} activeClassName={'active-menu-item'}>
 						<a className={`${styles['menu-item']}`}>Home</a>
-					</Link>
-					<Link href={'/nextjs'}>
+					</NavLink>
+					<NavLink
+						href={'/nextjs'}
+						activeClassName={'active-menu-item'}
+					>
 						<a className={`${styles['menu-item']}`}>Next.js</a>
-					</Link>
-					<Link href={'/tailwind'}>
+					</NavLink>
+					<NavLink
+						href={'/tailwind'}
+						activeClassName={'active-menu-item'}
+					>
 						<a className={`${styles['menu-item']}`}>TailwindCSS</a>
-					</Link>
-					<Link href={'/framermotion'}>
+					</NavLink>
+					<NavLink
+						href={'/framermotion'}
+						activeClassName={'active-menu-item'}
+					>
 						<a className={`${styles['menu-item']}`}>FramerMotion</a>
-					</Link>
+					</NavLink>
 				</nav>
 			</div>
 		</header>
