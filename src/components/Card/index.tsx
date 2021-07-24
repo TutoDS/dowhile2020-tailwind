@@ -12,7 +12,7 @@ const Card = ({ imgPath, layoutId, href, className, ...props }: Props) => {
 	return (
 		<Link href={href}>
 			<div
-				className={`relative w-full h-20 md:h-40 bg-gray-200 text-center rounded-xl shadow-md cursor-pointer hover:bg-gray-400 transition-all ${
+				className={`relative w-full h-20 md:h-40 bg-gray-200 text-center rounded-xl shadow-md cursor-pointer hover:bg-gray-300 hover:shadow-lg transition-all ${
 					className || ''
 				}`}
 				{...props}
